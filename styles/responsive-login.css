@@ -1,0 +1,46 @@
+@media screen and (max-width: 1400px) {
+  .display-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .login-form__forget-password {
+    font-size: 1.3rem;
+  }
+  .login-form__remember {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .person-wrapper__image {
+    width: 100%;
+  }
+  .display-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 880px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .person-wrapper {
+        display: none;
+      }
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+}
+
+@media screen and (max-width: 576px) {
+  .login-form__title {
+    font-size: 2.5rem;
+  }
+}

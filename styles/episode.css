@@ -1,0 +1,260 @@
+:root {
+  --white-color: #fff;
+  --dark: #100f14;
+  --primary-500: #c1b7f8;
+  --dark-500: #100f14;
+  --gray-500: #a8a7ae;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Estedad-Regular";
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--white-color);
+}
+
+/* 
+    
+    reset element
+    
+    */
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* 
+  
+  helper class
+  
+  */
+
+.flex-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+
+  main
+
+  */
+
+.main {
+}
+
+.episode-container {
+  margin: 5rem 0;
+}
+
+/*
+sidebar
+*/
+
+/*  */
+
+.sid {
+}
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(168, 167, 174, 20%);
+}
+.sidebar__haeder-icon {
+}
+.sidebar__header-text {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+}
+.sidebar-topic__container {
+  max-height: 60rem;
+  overflow-y: scroll;
+}
+.sidebar-topic {
+}
+.sidebar-topic__header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(168, 167, 174, 20%);
+  padding: 2rem 0.5rem;
+}
+.sidebar-topics__icon {
+}
+.sidebar-topic__link {
+  color: var(--dark-500);
+  margin-right: 0.8rem;
+}
+.sidebar-topic__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(168, 167, 174, 20%);
+  padding: 2rem 0.5rem;
+}
+.sidebar-topics__list-right {
+  display: flex;
+  align-items: center;
+}
+.sidebar-topics__list-item-icon {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+.sidebar-topics__list-item-link {
+  color: var(--dark-500);
+  margin-right: 0.8rem;
+}
+.sidebar-topics__list-left {
+  display: flex;
+  align-items: center;
+}
+.sidebar-topics__list-item-time {
+}
+
+/* 
+
+episode
+
+*/
+
+.episode {
+}
+.episode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--gray-500);
+}
+.episode-header__right {
+  display: flex;
+  align-items: center;
+}
+.episode-header__right-back-link {
+    display: flex;
+    align-items: center;
+}
+
+.episode-header__right-back-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.episode-header__right-text {
+    margin: 0 1rem;
+}
+
+.episode-header__right-icon {
+    color: #fff;
+}
+.episode-header__left {
+  display: flex;
+  align-items: center;
+}
+
+.episode-header__left-icon {
+    color: #fff;
+}
+.episode-header__left-text {
+    color: #fff;
+    margin-right: 1rem;
+}
+.episode-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.episode-content__video {
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+}
+.episode-content__btn-download {
+    padding: 0.8rem 2.5rem;
+    background-color: var(--primary-500);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    transition: all 200ms ease-in;
+}
+
+.episode-content__btn-download:hover{
+    background-color: #9785fc;
+}
+.episode-content__bottom {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+}
+.episode-content__backward,
+.episode-content__forward {
+    color: var(--dark-500);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.episode-content__backward-icon {
+    color: var(--dark-500);
+}
+.episode-content__forward {
+    
+}
+
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+    .reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .episode-header {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .episode-header__left-text{
+        font-size: 1.4rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar-topics__list-item-link{
+        font-size: 1.5rem;
+    }
+    .sidebar-topics__list-item-time{
+        margin-right: 1rem;
+    }
+    
+}
+
+

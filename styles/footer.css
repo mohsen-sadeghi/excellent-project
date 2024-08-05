@@ -1,0 +1,175 @@
+:root {
+  --white-color: #fff;
+  --dark: #100f14;
+  --primary-500: #c1b7f8;
+  --dark-500: #100f14;
+  --gray-500: #a8a7ae;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Estedad-Regular";
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--white-color);
+}
+
+/* 
+    
+    reset element
+    
+    */
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* 
+  
+  helper class
+  
+  */
+
+.flex-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+
+footer
+
+*/
+
+.footer {
+  background-color: var(--primary-500);
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  color: var(--dark-500);
+}
+.footer__wrapper {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer__content {
+}
+.footer__logo {
+}
+.footer__title {
+  margin: 2rem 0 1.5rem 0;
+  font-family: "Estedad-Bold";
+  font-size: 1.8rem;
+}
+.footer__caption {
+  max-width: 47rem;
+  color: var(--dark-500);
+}
+.footer__access {
+}
+.footer__access-title,
+.footer__courses-title {
+  font-family: "Estedad-Bold";
+  font-size: 1.8rem;
+}
+.footer__access-links,
+.footer__courses-links {
+  margin-top: 2rem;
+}
+.footer__access-link,
+.footer__courses-link {
+  margin-bottom: 1.5rem;
+}
+.footer__courses {
+}
+.footer__courses-links {
+}
+.footer__courses-link a {
+  color: var(--dark-500);
+}
+
+.line {
+  margin: 3rem 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgba(16, 15, 29, 10%);
+}
+
+.footer__Copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__Copyright-maker {
+}
+.footer__Copyright-text {
+}
+
+/* 
+
+responsiv
+
+*/
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+  .footer__caption {
+    max-width: 38rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__caption {
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  .footer__wrapper {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer__content {
+    text-align: center;
+  }
+  .footer__title {
+    font-size: 1.9rem;
+  }
+  .footer__Copyright {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer__Copyright-maker {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer__Copyright-text {
+    text-align: center;
+  }
+  .footer__access-links,
+  .footer__courses-links {
+    font-size: 1.4rem;
+  }
+  .footer__courses{
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+    .footer__courses ,
+    .footer__access{
+        text-align: center;
+    }
+  }
+  

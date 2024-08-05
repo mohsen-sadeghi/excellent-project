@@ -1,0 +1,267 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Tanha";
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--white-color);
+}
+
+/* 
+
+reset element
+
+*/
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* 
+
+
+nav
+
+
+*/
+
+/* 
+
+
+*/
+
+.header {
+  background-color: #100f14;
+}
+.nav {
+  padding: 2rem 0;
+}
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav__login-icon {
+  padding: 1rem 2.3rem;
+  background-color: #c1b7f8;
+  color: #000;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.nav__svgs {
+  cursor: pointer;
+}
+
+.menu {
+}
+.menu__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* start toggle icon */
+
+.nav__toggle-icon {
+  transition: all 200ms ease-in;
+  position: relative;
+  display: none;
+}
+.nav__toggle-icon,
+.nav__toggle-icon::before,
+.nav__toggle-icon::after {
+  cursor: pointer;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: #c1b7f8;
+  border-radius: 0.5rem;
+  transition: all 200ms ease-in;
+}
+
+.nav__toggle-icon::before {
+  content: " ";
+  position: absolute;
+  top: 1rem;
+}
+
+.nav__toggle-icon::after {
+  content: " ";
+  position: absolute;
+  top: -1rem;
+}
+
+.nav__toggle-icon--open {
+  background-color: transparent;
+}
+
+.nav__toggle-icon--open::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg);
+}
+.nav__toggle-icon--open::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/*  */
+.menu__links {
+  margin-left: 4rem;
+}
+
+.menu__links:last-child {
+  margin-left: 0;
+}
+.menu__link {
+}
+
+.main-header__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.main-header__link {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  transition: all 200ms ease-in;
+}
+
+.main-header__link:hover {
+  color: #7f8187;
+}
+
+.main-header__link-icon {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Start DropDown Styles */
+
+.main-header__dropdown {
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  right: 0;
+  background-color: var(--white-color);
+  transition: all 200ms ease-in-out;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  width: 24rem;
+  z-index: 1;
+  padding: 1rem 0;
+  border-bottom: 3px solid var(--primary-color);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.main-header__item:hover .main-header__dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 6.5rem;
+}
+
+.main-header__dropdown-link {
+  display: block;
+  padding: 0.6rem 2rem;
+  font-size: 1.4rem;
+  color: var(--dark-color);
+  transition: all 400ms ease;
+}
+
+.main-header__dropdown-link:hover {
+  color: #1e83f0;
+}
+
+/* Finish DropDown Styles */
+/* start mobile menu */
+.mobile-menu {
+  position: fixed;
+  left: -17rem;
+  top: 0;
+  bottom: 0;
+  /* From https://css.glass */
+  background: rgba(16, 15, 20, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  justify-content: top;
+
+  transition: all 200ms ease-in;
+
+  display: none;
+}
+.mobile-menu--open {
+  left: 0;
+  z-index: 5;
+}
+.mobile-menu__header {
+  text-align: right;
+  padding: 5rem;
+}
+
+.mobile-menu__links {
+  margin-bottom: 2rem;
+}
+
+.mobile-menu__link {
+}
+
+/* start responsive */
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+  .menu__links {
+    margin-left: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .menu {
+    display: none;
+  }
+  .nav__login-icon {
+    display: none;
+  }
+  .nav__toggle-icon {
+    display: block;
+  }
+  .main-header__item {
+    padding: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+  .nav__logo {
+    width: 12rem;
+  }
+}

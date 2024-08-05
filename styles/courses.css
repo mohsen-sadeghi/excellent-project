@@ -1,0 +1,274 @@
+:root {
+    --white-color: #fff;
+    --dark: #100f14;
+    --primary-500: #c1b7f8;
+    --dark-500: #100f14;
+    --gray-500: #a8a7ae;
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Estedad-Regular";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--white-color);
+  }
+  
+  /* 
+    
+    reset element
+    
+*/
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* 
+  
+  helper class
+  
+  */
+  
+  .flex-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* 
+  
+main
+  
+*/
+  
+.main {
+}
+
+/* 
+ search
+*/
+
+.search-result {
+}
+.search-result__header{
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.search-result__header div {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-500);
+    border-radius: 0.5rem;
+}
+.search-result__icon {
+}
+.nav__svgs {
+}
+.search-result__title {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    font-family: "Estedad-Bold";
+}
+.search-result__course {
+}
+
+
+
+
+/* 
+
+courses
+
+*/
+
+.courses {
+}
+
+.courses__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.courses__link {
+  color: #100f14;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1.5rem;
+  background-color: rgba(168, 167, 174, 10%);
+  font-weight: bold;
+  transition: all 200ms ease-in;
+  text-align: center;
+}
+
+.courses__link--active {
+  background-color: var(--primary-500);
+}
+
+.courses__link:hover {
+  background-color: var(--primary-500);
+}
+
+.courses__box {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(168, 167, 174, 20%);
+}
+.courses-box__link {
+}
+.courses__image {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+.courses__svgs {
+  text-align: left;
+  padding-top: 0.5rem;
+}
+.courses__svg {
+}
+.courses__title {
+  font-size: 2.5rem;
+  font-family: "Estedad-Medium";
+  color: var(--dark-500);
+  margin: 2rem 0;
+}
+
+.courses-box__status {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dark-500);
+}
+.courses-box__date {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.courses__date {
+  font-family: "Estedad-SemiBold";
+}
+.courses-box__user {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.course-box__users-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.courses-box__user-text {
+  font-family: "Estedad-SemiBold";
+}
+
+.courses__price--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(168, 167, 174, 10%);
+}
+.courses__teacher {
+  color: var(--dark-500);
+}
+.courses__price {
+  color: var(--dark-500);
+}
+
+/* article */
+
+/* Article */
+
+.article {
+}
+.article__container {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(168, 167, 174, 20%);
+  height: 100%;
+}
+.article__image {
+  width: 100%;
+}
+.article__header {
+  font-size: 1.7rem;
+  font-family: "Estedad-Medium";
+  color: var(--dark-500);
+  margin-bottom: 0.5rem;
+}
+
+.article__caption {
+  color: var(--gray-500);
+  margin-bottom: 2rem;
+}
+.article__link {
+  text-align: center;
+  padding: 0.8rem 2.5rem;
+  background-color: var(--primary-500);
+  border-radius: 0.8rem;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+/*  */
+.text-danger{
+  padding: 0.8rem 1.5rem;
+  background-color:crimson;
+  width: 100%;
+  border-radius: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* paginate */
+
+.search-result__paginate {
+    margin-bottom: 3rem;
+}
+.paginate {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    gap: 2.5rem;
+}
+.paginate__item {
+
+}
+
+
+.paginate__link {
+    padding: 0.8rem 1.8rem;
+    border: 1px solid var(--primary-500);
+    border-radius: 0.5rem;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+    color: var(--primary-500);
+}
+
+.paginate__link--active{
+    color: #fff;
+    background-color: #c1b7f8;
+}
+
+
+.paginate__link:hover{
+    color: #fff;
+    background-color: #c1b7f8;
+}
+
+
+@media screen and (max-width: 992px) {
+  .article {
+    text-align: center;
+  }
+}

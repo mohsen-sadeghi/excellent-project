@@ -1,0 +1,120 @@
+:root {
+    --white-color: #fff;
+    --dark: #100f14;
+    --primary-500: #c1b7f8;
+    --dark-500: #100f14;
+    --gray-500: #a8a7ae;
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Estedad-Regular";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--white-color);
+  }
+  
+  /* 
+    
+    reset element
+    
+    */
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* 
+  
+  helper class
+  
+  */
+  
+  .flex-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* main */
+  .main {
+}
+
+/* form */
+.form {
+}
+.form__box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20rem auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2.4rem;
+    border-radius: 1.5rem;
+    max-width: 50rem;
+
+}
+.form__title {
+    font-size: 2rem;
+    font-family: "Estedad-Bold";
+}
+.form__caption {
+    color: var(--gray-500);
+    margin-bottom: 3rem;
+}
+.form__name-container,
+.form__email-container,
+.form__number-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.form__name,
+.form__number,
+.form__email {
+    /* min-width: 38rem; */
+    width: 100%;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #100f14;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 3px 0px;
+    border-radius: 0.5rem;
+}
+.form__svg {
+    max-width: 2rem;
+    max-height: 2rem;
+    position: absolute;
+    left: 1rem;
+    top: 1.3rem;
+    color: var(--primary-500);
+}
+
+.form__Opinion {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 3px 0px;
+    font-size: 1.4rem;
+    height: 13rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid #100f14;
+    border-radius: 0.5rem;
+}
+.form__btn {
+    width: 100%;
+    background-color: var(--primary-500);
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    transition: all 200ms ease-in;
+}
+
+.form__btn:hover{
+    background-color: #9382f5;
+}
