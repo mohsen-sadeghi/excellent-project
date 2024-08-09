@@ -1,12 +1,12 @@
-import { showInfoCourseToDom , menuClickHandler} from "./funcs/course.js"
-// window.menuClickHandler = menuClickHandler
-
+import { showInfoCourseToDom ,showCourseInformation ,showTeacherInformation ,ShowCourseComments , submitComments , relatedCourses} from "./funcs/course.js"
+window.showCourseInformation = showCourseInformation
+window.showTeacherInformation = showTeacherInformation
+window.ShowCourseComments = ShowCourseComments
 window.addEventListener('load' , ()=>{
-    const menuInfoBtn = document.querySelectorAll('.menu-courses__item')
-    menuInfoBtn.forEach(menuBtn =>{
-        menuBtn.addEventListener('click' , ()=>{
-            menuClickHandler(menuBtn , menuInfoBtn)
-        })
+    const submitCommentBtn = document.querySelector('.comments__respond-btn')
+    submitCommentBtn.addEventListener('click' , ()=>{
+        submitComments()
     })
     showInfoCourseToDom()
+    relatedCourses()
 })
