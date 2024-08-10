@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./styles/font.css" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/grid.css" />
@@ -18,7 +19,7 @@
           <div class="nav__wrapper">
             <div class="nav__links">
               <div class="nav__toggle-icon"></div>
-              <a href="#" class="nav__login-icon">لاگین</a>
+              <!--  load btn from js -->
               <svg
                 width="24"
                 height="24"
@@ -48,6 +49,7 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 class="nav__svgs"
+                onclick="searchClickHandler()"
               >
                 <path
                   fill-rule="evenodd"
@@ -66,7 +68,7 @@
                   <a
                     href="category.html?cat=/category-info/backend&amp;paginate=1"
                     class="main-header__link"
-                    >بک اند
+                    >دوره ها
                     <svg
                       class="svg-inline--fa fa-angle-down main-header__link-icon"
                       aria-hidden="true"
@@ -90,36 +92,7 @@
                       class="main-header__link"
                     >
                     </a>
-                    <li class="main-header__dropdown-item">
-                      <a
-                        href="category.html?cat=/category-info/backend&amp;paginate=1"
-                        class="main-header__link"
-                      >
-                      </a
-                      ><a href="#" class="main-header__dropdown-link">
-                        آموزش جامع Nodejs
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش دیتابیس Mysql
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش دیتابیس Mongo
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش داکر
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش جامع PHP
-                      </a>
-                    </li>
+                    <!-- load data from js -->
                   </ul>
                 </li>
                 <li class="menu__links">
@@ -267,342 +240,7 @@
                           <a href="#" class="sidebar-topic__link">لیست دوره</a>
                         </li>
                         <!-- List -->
-                        <li class="sidebar-topic__list">
-                          <div class="sidebar-topics__list-right">
-                            <svg
-                              class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="circle-play"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                              ></path>
-                            </svg>
-                            <a class="sidebar-topics__list-item-link" href="#"
-                              >آشنایی اولیه با متد toFixed</a
-                            >
-                          </div>
-                          <div class="sidebar-topics__list-left">
-                            <span class="sidebar-topics__list-item-time">12:09</span>
-                            <svg
-                              class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="unlock"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 448 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                              ></path>
-                            </svg>
-                          </div>
-                        </li>
-                        <li class="sidebar-topic__list">
-                          <div class="sidebar-topics__list-right">
-                            <svg
-                              class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="circle-play"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                              ></path>
-                            </svg>
-                            <a class="sidebar-topics__list-item-link" href="#"
-                              >آشنایی اولیه با متد toFixed</a
-                            >
-                          </div>
-                          <div class="sidebar-topics__list-left">
-                            <span class="sidebar-topics__list-item-time">12:09</span>
-                            <svg
-                              class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="unlock"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 448 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                              ></path>
-                            </svg>
-                          </div>
-                        </li>
-                        <li class="sidebar-topic__list">
-                          <div class="sidebar-topics__list-right">
-                            <svg
-                              class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="circle-play"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                              ></path>
-                            </svg>
-                            <a class="sidebar-topics__list-item-link" href="#"
-                              >آشنایی اولیه با متد toFixed</a
-                            >
-                          </div>
-                          <div class="sidebar-topics__list-left">
-                            <span class="sidebar-topics__list-item-time">12:09</span>
-                            <svg
-                              class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="unlock"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 448 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                              ></path>
-                            </svg>
-                          </div>
-                        </li>
-                        <li class="sidebar-topic__list">
-                          <div class="sidebar-topics__list-right">
-                            <svg
-                              class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="circle-play"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                              ></path>
-                            </svg>
-                            <a class="sidebar-topics__list-item-link" href="#"
-                              >آشنایی اولیه با متد toFixed</a
-                            >
-                          </div>
-                          <div class="sidebar-topics__list-left">
-                            <span class="sidebar-topics__list-item-time">12:09</span>
-                            <svg
-                              class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="unlock"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 448 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                              ></path>
-                            </svg>
-                          </div>
-                        </li>
-                        <li class="sidebar-topic__list">
-                          <div class="sidebar-topics__list-right">
-                            <svg
-                              class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="circle-play"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                              ></path>
-                            </svg>
-                            <a class="sidebar-topics__list-item-link" href="#"
-                              >آشنایی اولیه با متد toFixed</a
-                            >
-                          </div>
-                          <div class="sidebar-topics__list-left">
-                            <span class="sidebar-topics__list-item-time">12:09</span>
-                            <svg
-                              class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="unlock"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 448 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                              ></path>
-                            </svg>
-                          </div>
-                        </li>
-                        <li class="sidebar-topic__list">
-                          <div class="sidebar-topics__list-right">
-                            <svg
-                              class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="circle-play"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                              ></path>
-                            </svg>
-                            <a class="sidebar-topics__list-item-link" href="#"
-                              >آشنایی اولیه با متد toFixed</a
-                            >
-                          </div>
-                          <div class="sidebar-topics__list-left">
-                            <span class="sidebar-topics__list-item-time">12:09</span>
-                            <svg
-                              class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon"
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="unlock"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 448 512"
-                              data-fa-i2svg=""
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                              ></path>
-                            </svg>
-                          </div>
-                        </li>
-                        <li class="sidebar-topic__list">
-                            <div class="sidebar-topics__list-right">
-                              <svg
-                                class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                                aria-hidden="true"
-                                focusable="false"
-                                data-prefix="fas"
-                                data-icon="circle-play"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"
-                                data-fa-i2svg=""
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                                ></path>
-                              </svg>
-                              <a class="sidebar-topics__list-item-link" href="#"
-                                >آشنایی اولیه با متد toFixed</a
-                              >
-                            </div>
-                            <div class="sidebar-topics__list-left">
-                              <span class="sidebar-topics__list-item-time">12:09</span>
-                              <svg
-                                class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon"
-                                aria-hidden="true"
-                                focusable="false"
-                                data-prefix="fas"
-                                data-icon="unlock"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512"
-                                data-fa-i2svg=""
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                                ></path>
-                              </svg>
-                            </div>
-                          </li>
-                        <li class="sidebar-topic__list">
-                            <div class="sidebar-topics__list-right">
-                              <svg
-                                class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"
-                                aria-hidden="true"
-                                focusable="false"
-                                data-prefix="fas"
-                                data-icon="circle-play"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"
-                                data-fa-i2svg=""
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"
-                                ></path>
-                              </svg>
-                              <a class="sidebar-topics__list-item-link" href="#"
-                                >آشنایی اولیه با متد toFixed</a
-                              >
-                            </div>
-                            <div class="sidebar-topics__list-left">
-                              <span class="sidebar-topics__list-item-time">12:09</span>
-                              <svg
-                                class="svg-inline--fa fa-unlock sidebar-topics__list-item-icon sidebar-topics__list-item-icon"
-                                aria-hidden="true"
-                                focusable="false"
-                                data-prefix="fas"
-                                data-icon="unlock"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512"
-                                data-fa-i2svg=""
-                              >
-                                <path
-                                  fill="#000"
-                                  d="M144 192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80V144C80 64.47 144.5 0 224 0C281.5 0 331 33.69 354.1 82.27C361.7 98.23 354.9 117.3 338.1 124.9C322.1 132.5 303.9 125.7 296.3 109.7C283.4 82.63 255.9 64 224 64C179.8 64 144 99.82 144 144L144 192z"
-                                ></path>
-                              </svg>
-                            </div>
-                        </li>
+                         <!-- load list from js -->
                      </ul>
                 </div>
             
@@ -612,7 +250,7 @@
                 <div class="episode">
                     <div class="episode-header">
                         <div class="episode-header__right">
-                            <a class="episode-header__right-back-link" href="#">
+                            <a class="episode-header__right-back-link" href="index.html">
                                 <svg class="svg-inline--fa fa-angle-right episode-header__right-back-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"></path></svg><!-- <i class="episode-header__right-back-icon fa fa-angle-right"></i> Font Awesome fontawesome.com -->
                             </a>
                             <a href="#" class="episode-header__right-text">به دوره خانه بروید</a>
@@ -626,7 +264,7 @@
                     <div class="episode-content">
                         <!-- <video class="episode-content__video" src="./video/Git-03-I-love-git.mp4"></video> -->
                         <video class="episode-content__video" width="320" height="240" controls>
-                            <source src="./video/Git-03-I-love-git.mp4" type="video/mp4">
+                            <source class="video-source" src="" type="video/mp4">
                         </video>
                         <div class="episode-content__bottom">
                             <a class="episode-content__backward" href="#">
@@ -671,10 +309,7 @@
           <div class="footer__courses">
             <h5 class="footer__courses-title">دوره ها</h5>
             <ul class="footer__courses-links">
-              <li class="footer__courses-link">پایتون</li>
-              <li class="footer__courses-link">ریکت</li>
-              <li class="footer__courses-link">جاوا اسکریپت</li>
-              <li class="footer__courses-link">html</li>
+              <!-- load courses from js -->
             </ul>
           </div>
         </div>
@@ -689,6 +324,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/index.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/shared.js" type="module"></script>
+    <script src="./js/episode.js" type="module"></script>
   </body>
 </html>
