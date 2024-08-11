@@ -5,7 +5,7 @@ const getAndShowAllCourses = async ()=>{
     const courseWrapper = document.querySelector('.course-wrapper')
     const res = await fetch(`http://localhost:4000/v1/courses`)
     const allCourses = await res.json()
-    const paginateCoursesArray = paginateItem(allCourses , paginateWrapper , getUrlParamInUrl('paginate') , 3 , 'courses.html')
+    const paginateCoursesArray = paginateItem(allCourses , paginateWrapper , getUrlParamInUrl('paginate') , 3 , 'courses.html?')
     courseWrapper.innerHTML = ''
     paginateCoursesArray.forEach((course) => {
         courseWrapper.insertAdjacentHTML(

@@ -36,7 +36,7 @@ const getAndShowCategory = async () => {
 };
 
 const categoryClickHandler = (ID) => {
-  location.href = `category.html?cat=${ID}`;
+  location.href = `category.html?cat=${ID}&paginate=1`;
 };
 
 const getAndShowAllCourses = async (event) => {
