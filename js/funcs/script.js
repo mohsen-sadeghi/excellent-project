@@ -489,12 +489,11 @@ const getAndShowAllArticle = async ()=>{
   const allArticle = await res.json()
   allArticle.sort(() => Math.random() - 0.5);
   allArticle.slice(0 , 3).forEach(article =>{
-    console.log(article);
     articleWrapper.insertAdjacentHTML("beforeend" , `
              <div class="col-12 col-sm-6 col-lg-4">
               <div class="article__container">
                 <div class="article__header">
-                  <a href="blog.html?${article.shortName}">
+                  <a href="blog.html?shortName=${article.shortName}">
                     <img
                       class="article__image"
                       src=http://localhost:4000/courses/covers/${article.cover}
@@ -506,7 +505,7 @@ const getAndShowAllArticle = async ()=>{
                 <p class="article__caption">
                     ${article.description} 
                 </p>
-                <a href="blog.html?${article.shortName}" class="article__link">بیشتر بخوانید</a>
+                <a href="blog.html?shortName=${article.shortName}" class="article__link">بیشتر بخوانید</a>
               </div>
             </div>
       `)

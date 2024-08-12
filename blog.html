@@ -18,7 +18,7 @@
           <div class="nav__wrapper">
             <div class="nav__links">
               <div class="nav__toggle-icon"></div>
-              <a href="#" class="nav__login-icon">لاگین</a>
+              <!-- load btn from js -->
               <svg
                 width="24"
                 height="24"
@@ -48,6 +48,7 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 class="nav__svgs"
+                onclick="searchClickHandler()"
               >
                 <path
                   fill-rule="evenodd"
@@ -90,36 +91,7 @@
                       class="main-header__link"
                     >
                     </a>
-                    <li class="main-header__dropdown-item">
-                      <a
-                        href="category.html?cat=/category-info/backend&amp;paginate=1"
-                        class="main-header__link"
-                      >
-                      </a
-                      ><a href="#" class="main-header__dropdown-link">
-                        آموزش جامع Nodejs
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش دیتابیس Mysql
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش دیتابیس Mongo
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش داکر
-                      </a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">
-                        آموزش جامع PHP
-                      </a>
-                    </li>
+                    <!-- load courses from js -->
                   </ul>
                 </li>
                 <li class="menu__links">
@@ -302,10 +274,7 @@
           <div class="footer__courses">
             <h5 class="footer__courses-title">دوره ها</h5>
             <ul class="footer__courses-links">
-              <li class="footer__courses-link">پایتون</li>
-              <li class="footer__courses-link">ریکت</li>
-              <li class="footer__courses-link">جاوا اسکریپت</li>
-              <li class="footer__courses-link">html</li>
+              <!-- load courses from js -->
             </ul>
           </div>
         </div>
@@ -320,6 +289,9 @@
         </div>
       </div>
     </footer>
-    <script src="./js/index.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/shared.js" type="module"></script>
+    <script src="./js/blog.js" type="module"></script>
+
   </body>
 </html>
