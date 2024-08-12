@@ -38,7 +38,7 @@ const getAndShowCourseInNavbarAndFooter = async () => {
       "beforeend",
       `
                     <li class="main-header__dropdown-item">
-                      <a href="course.html?id=${course._id}" class="main-header__dropdown-link">
+                      <a href="course.html?name=${course.href.slice(13)}" class="main-header__dropdown-link">
                         ${course.title}
                       </a>
                     </li>
@@ -49,7 +49,7 @@ const getAndShowCourseInNavbarAndFooter = async () => {
     footerCourseContainer.insertAdjacentHTML(
       "beforeend",
       `
-                <li class="footer__courses-link"><a href="course.html?id=${course._id}">${course.title}</a></li>
+                <li class="footer__courses-link"><a href="course.html?name=${course.href.slice(13)}">${course.title}</a></li>
                 `
     );
   });
