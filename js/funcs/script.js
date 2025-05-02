@@ -1,7 +1,23 @@
 import { insertCourseBoxHtml } from "./utils.js";
+
+
+const showLoading = ()=>{
+  const loadingElem = document.querySelector(".loading")
+  console.log(loadingElem);
+  loadingElem.style.display = "block"
+}
+
+const hideLoading = ()=>{
+  const loadingElem = document.getElementsByClassName("loading")
+  loadingElem.style.display = "none"
+}
+
+
+
 const getAndShowCategory = async () => {
+
   const categoryContainerElem = document.querySelector(".category-container");
-  const res = await fetch(`http://localhost:4000/v1/menus`);
+  const res = await fetch(`https://excellent.liara.run/v1/menus`);
   const category = await res.json();
   category.forEach((category) => {
     categoryContainerElem.insertAdjacentHTML(
@@ -43,7 +59,7 @@ const categoryClickHandler = (ID) => {
 const getAndShowAllCourses = async (event) => {
   const courseWrapper = document.querySelector(".course-wrapper");
   const courseAllBtn = document.querySelectorAll(".courses__link");
-  const res = await fetch(`http://localhost:4000/v1/courses`);
+  const res = await fetch(`https://excellent.liara.run/v1/courses`);
   const courses = await res.json();
 
   if (event === 0 || !event.target.classList[1]) {
@@ -61,7 +77,7 @@ const getAndShowPopularCourses = async () => {
   const courseWrapper = document.querySelector(".course-wrapper");
   courseWrapper.innerHTML = "";
   const courseAllBtn = document.querySelectorAll(".courses__link");
-  const res = await fetch(`http://localhost:4000/v1/courses/popular`);
+  const res = await fetch(`https://excellent.liara.run/v1/courses/popular`);
   const popularCourses = await res.json();
   courseAllBtn.forEach((elem) =>
     elem.classList.remove("courses__link--active")
@@ -74,7 +90,7 @@ const getAndShowPresellCourses = async () => {
   const courseWrapper = document.querySelector(".course-wrapper");
   courseWrapper.innerHTML = "";
   const courseAllBtn = document.querySelectorAll(".courses__link");
-  const res = await fetch(`http://localhost:4000/v1/courses/presell`);
+  const res = await fetch(`https://excellent.liara.run/v1/courses/presell`);
   const presellCourses = await res.json();
 
   // add active class
@@ -89,7 +105,7 @@ const getAndShowPresellCourses = async () => {
 
 const getAndShowAllArticle = async () => {
   const articleWrapper = document.querySelector(".article-wrapper");
-  const res = await fetch(`http://localhost:4000/v1/articles`);
+  const res = await fetch(`https://excellent.liara.run/v1/articles`);
   const allArticle = await res.json();
   allArticle.sort(() => Math.random() - 0.5);
   allArticle.slice(0, 3).forEach((article) => {
@@ -102,7 +118,7 @@ const getAndShowAllArticle = async () => {
                   <a href="blog.html?shortName=${article.shortName}">
                     <img
                       class="article__image"
-                      src=http://localhost:4000/courses/covers/${article.cover}
+                      src=https://excellent.liara.run/courses/covers/${article.cover}
                       alt="article image"
                     />
                   </a>

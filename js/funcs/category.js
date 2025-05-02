@@ -3,7 +3,7 @@ import {getUrlParamInUrl} from './utils.js'
 const getAndShowCategoryCourses = async ()=>{
     let categoryName = getUrlParamInUrl('cat')
     categoryName = categoryName.slice(15)
-    const res = await fetch(`http://localhost:4000/v1/courses/category/${categoryName}`)
+    const res = await fetch(`https://excellent.liara.run/v1/courses/category/${categoryName}`)
     const category = await res.json()
     return category
 }

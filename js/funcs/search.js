@@ -4,7 +4,7 @@ const showSearchResultCoursesAndArticle = async ()=>{
     const courseWrapper = document.querySelector('.course-wrapper')
     const articleWrapper = document.querySelector('.article-wrapper')
     const userSearch = getUrlParamInUrl('searchName')
-    const res = await fetch(`http://localhost:4000/v1/search/${userSearch}`)
+    const res = await fetch(`https://excellent.liara.run/v1/search/${userSearch}`)
     const resultSearch = await res.json()
     console.log(resultSearch);
     if(resultSearch.allResultCourses.length){
@@ -18,7 +18,7 @@ const showSearchResultCoursesAndArticle = async ()=>{
                   course.shortName
                 }" class="courses-box__link">
                   <img
-                    src=http://localhost:4000/courses/covers/${course.cover}
+                    src=https://excellent.liara.run/courses/covers/${course.cover}
                     class="courses__image"
                   />
                   <div class="courses__svgs">
@@ -181,7 +181,7 @@ const showSearchResultCoursesAndArticle = async ()=>{
                   <a href="blog.html?${article.shortName}">
                     <img
                       class="article__image"
-                      src=http://localhost:4000/courses/covers/${article.cover}
+                      src=https://excellent.liara.run/courses/covers/${article.cover}
                       alt="article image"
                     />
                   </a>

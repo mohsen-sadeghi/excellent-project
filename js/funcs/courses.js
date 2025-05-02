@@ -3,7 +3,7 @@ import { paginateItem , getUrlParamInUrl} from "./utils.js";
 const getAndShowAllCourses = async ()=>{
     const paginateWrapper = document.querySelector('.paginate')
     const courseWrapper = document.querySelector('.course-wrapper')
-    const res = await fetch(`http://localhost:4000/v1/courses`)
+    const res = await fetch(`https://excellent.liara.run/v1/courses`)
     const allCourses = await res.json()
     const paginateCoursesArray = paginateItem(allCourses , paginateWrapper , getUrlParamInUrl('paginate') , 3 , 'courses.html?')
     courseWrapper.innerHTML = ''
@@ -17,7 +17,7 @@ const getAndShowAllCourses = async ()=>{
                     course.shortName
                   }" class="courses-box__link">
                     <img
-                      src=http://localhost:4000/courses/covers/${course.cover}
+                      src=https://excellent.liara.run/courses/covers/${course.cover}
                       class="courses__image"
                     />
                     <div class="courses__svgs">

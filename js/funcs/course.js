@@ -1,7 +1,7 @@
 import { getUrlParamInUrl, getToken, showSwal } from "./utils.js";
 const showInfoCourseToDom = async () => {
   const courseName = getUrlParamInUrl("name");
-  const res = await fetch(`http://localhost:4000/v1/courses/${courseName}`, {
+  const res = await fetch(`https://excellent.liara.run/v1/courses/${courseName}`, {
     headers: {
       Authorization: `bearer ${getToken()}`,
     },
@@ -17,7 +17,7 @@ const showInfoCourseToDom = async () => {
   const collapseWrapper = document.querySelector(".accordion-item");
   const registerLinkWrapperElem = document.querySelector(".register-links");
 
-  const imageLink = `http://localhost:4000/courses/covers/${course.cover}`;
+  const imageLink = `https://excellent.liara.run/courses/covers/${course.cover}`;
   mainImageElem.src = imageLink;
   boxImageElem.src = imageLink;
 
@@ -269,7 +269,7 @@ const submitComments = async () => {
     score: score,
   };
 
-  const res = await fetch(`http://localhost:4000/v1/comments`, {
+  const res = await fetch(`https://excellent.liara.run/v1/comments`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${getToken()}`,
@@ -294,7 +294,7 @@ const relatedCourses = async () => {
   const relatedCourseWrapper = document.querySelector(".related-wrapper");
   const courseShortName = getUrlParamInUrl("name");
   const res = await fetch(
-    `http://localhost:4000/v1/courses/related/${courseShortName}`
+    `https://excellent.liara.run/v1/courses/related/${courseShortName}`
   );
   const relatedCourses = await res.json();
   relatedCourses.forEach((course) => {
@@ -307,7 +307,7 @@ const relatedCourses = async () => {
                   course.shortName
                 }" class="courses-box__link">
                   <img
-                    src=http://localhost:4000/courses/covers/${course.cover}
+                    src=https://excellent.liara.run/courses/covers/${course.cover}
                     class="courses__image"
                   />
                   <div class="courses__svgs">

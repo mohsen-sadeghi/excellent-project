@@ -54,7 +54,7 @@ const insertCourseBoxHtml = (arr , parent) => {
                         course.shortName
                       }" class="courses-box__link">
                         <img
-                          src=http://localhost:4000/courses/covers/${course.cover}
+                          src=https://excellent.liara.run/courses/covers/${course.cover}
                           class="courses__image"
                         />
                         <div class="courses__svgs">
