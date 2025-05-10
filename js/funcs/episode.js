@@ -5,7 +5,7 @@ const getSessionDetails = async () => {
   const videoSourceElem = document.querySelector(".video-source");
   const listSessionElem = document.querySelector(".sidebar-topic");
   const res = await fetch(
-    `https://excellent.liara.run/v1/courses/${shortName}/${courseId}`,
+    `http://localhost:4000/v1/courses/${shortName}/${courseId}`,
     {
       headers: {
         Authorization: `Bearer ${getToken()}`,
@@ -15,7 +15,7 @@ const getSessionDetails = async () => {
   );
   const data = await res.json();
   console.log(data);
-  videoSourceElem.src = `https://excellent.liara.run/v1/courses/${data.session.video}`;
+  videoSourceElem.src = `http://localhost:4000/v1/courses/${data.session.video}`;
   data.sessions.forEach((session) => {
     listSessionElem.insertAdjacentHTML(
       "beforeend",

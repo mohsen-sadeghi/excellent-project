@@ -4,7 +4,7 @@ const showSearchResultCoursesAndArticle = async ()=>{
     const courseWrapper = document.querySelector('.course-wrapper')
     const articleWrapper = document.querySelector('.article-wrapper')
     const userSearch = getUrlParamInUrl('searchName')
-    const res = await fetch(`https://excellent.liara.run/v1/search/${userSearch}`)
+    const res = await fetch(`http://localhost:4000/v1/search/${userSearch}`)
     const resultSearch = await res.json()
     console.log(resultSearch);
     if(resultSearch.allResultCourses.length){

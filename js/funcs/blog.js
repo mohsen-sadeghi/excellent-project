@@ -7,7 +7,7 @@ const getAndShowArticleDetails = async ()=>{
     const publicationDateElem = document.querySelector('.article-left-body__data') 
     const updateDateElem = document.querySelector('.article-left-body__update')   
     const shortName = getUrlParamInUrl('shortName')
-    const res = await fetch(`https://excellent.liara.run/v1/articles/${shortName}`)
+    const res = await fetch(`http://localhost:4000/v1/articles/${shortName}`)
     const article = await res.json()
     
     const createdAt = article.creator.createdAt.slice(0 , 10)

@@ -16,7 +16,7 @@ const registerUser = async ()=>{
         phone : userPhone.value.trim(),
     }
 
-    const res = await fetch(`https://excellent.liara.run/v1/auth/register` , {
+    const res = await fetch(`http://localhost:4000/v1/auth/register` , {
         method: 'POST',
         headers:{
             "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const loginUser = async ()=>{
         password : userPassword.value.trim()
     }
 
-    const res = await fetch(`https://excellent.liara.run/v1/auth/login` , {
+    const res = await fetch(`http://localhost:4000/v1/auth/login` , {
         method:"POST",
         headers : {
             "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const loginUser = async ()=>{
 const getMe = async ()=>{
     const token = getToken()
     if(token){
-        const res = await fetch(`https://excellent.liara.run/v1/auth/me` , {
+        const res = await fetch(`http://localhost:4000/v1/auth/me` , {
             headers:{
                 Authorization : `bearer ${token}`
             }

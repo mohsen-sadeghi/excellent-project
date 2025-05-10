@@ -28,7 +28,7 @@ const getAndShowCourseInNavbarAndFooter = async () => {
   const footerCourseContainer = document.querySelector(
     ".footer__courses-links"
   );
-  const res = await fetch(`https://excellent.liara.run/v1/menus/topbar`);
+  const res = await fetch(`http://localhost:4000/v1/menus/topbar`);
   const data = await res.json();
 
   

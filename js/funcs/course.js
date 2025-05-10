@@ -1,7 +1,7 @@
 import { getUrlParamInUrl, getToken, showSwal } from "./utils.js";
 const showInfoCourseToDom = async () => {
   const courseName = getUrlParamInUrl("name");
-  const res = await fetch(`https://excellent.liara.run/v1/courses/${courseName}`, {
+  const res = await fetch(`http://localhost:4000/v1/courses/${courseName}`, {
     headers: {
       Authorization: `bearer ${getToken()}`,
     },
@@ -269,7 +269,7 @@ const submitComments = async () => {
     score: score,
   };
 
-  const res = await fetch(`https://excellent.liara.run/v1/comments`, {
+  const res = await fetch(`http://localhost:4000/v1/comments`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${getToken()}`,
@@ -294,7 +294,7 @@ const relatedCourses = async () => {
   const relatedCourseWrapper = document.querySelector(".related-wrapper");
   const courseShortName = getUrlParamInUrl("name");
   const res = await fetch(
-    `https://excellent.liara.run/v1/courses/related/${courseShortName}`
+    `http://localhost:4000/v1/courses/related/${courseShortName}`
   );
   const relatedCourses = await res.json();
   relatedCourses.forEach((course) => {

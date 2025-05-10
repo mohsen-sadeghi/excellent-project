@@ -13,7 +13,7 @@ const submitContactUsMassage = async ()=>{
         body: formTextElem.value.trim(),
     }
 
-    const res = await fetch(`https://excellent.liara.run/v1/contact` , {
+    const res = await fetch(`http://localhost:4000/v1/contact` , {
         method:'POST',
         headers:{
             "content-type": "application/json",
